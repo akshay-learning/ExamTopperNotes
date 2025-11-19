@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ExamTopperNotes.in — Premium Gold</title>
+<meta name="description" content="ExamTopperNotes — Premium notes, audio summaries, instant downloads. UPI payments to Ajay Dwivedi (9140505924@ybl).">
+<style>
+/* ===== GLOBAL FIX: prevents right-side white line ===== */
+html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:#06060a;color:#eee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+:root{--gold:#d4af37;--card:#0f0f12;--muted:#aaa;--accent:#06a3ff}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{display:flex;align-items:center;gap:14px}
+.logo{width:84px;height:84px;border-radius:14px;background:linear-gradient(135deg,var(--gold),#b68a15);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(212,175,55,0.08)}
+.title{font-weight:800;font-size:20px}
+.nav{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--gold);color:#000;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer;border:none}
+.btn-alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:8px 10px;border-radius:10px;cursor:pointer}
+.hero{margin-top:18px;border-radius:14px;overflow:hidden;padding:26px;background:linear-gradient(90deg,rgba(212,175,55,0.04),rgba(0,0,0,0.18));display:grid;grid-template-columns:1fr 380px;gap:20px}
+.hero h1{font-size:34px;color:var(--gold);margin:0}
+.hero p{color:#ddd}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.h2{font-size:20px;color:var(--gold);margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.item{background:#0d0d10;padding:14px;border-radius:12px}
+.item h4{margin:0 0 6px}
+.small{font-size:13px;color:var(--muted)}
+.cart{position:fixed;right:18px;bottom:18px;background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);width:360px;z-index:80}
+.cart h4{margin:0 0 8px}
+.cart-list{max-height:260px;overflow:auto}
+.cart-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+.footer{margin-top:40px;text-align:center;color:var(--muted);padding:18px}
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#0b0b0d;padding:18px;border-radius:12px;z-index:200;width:92%;max-width:720px;border:1px solid rgba(255,255,255,0.05);display:none}
+.modal.show{display:block}
+.input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.qr{background:#fff;padding:8px;border-radius:10px;display:inline-block}
+.order-card{background:#0d0d0f;padding:10px;border-radius:8px;margin-bottom:8px;border:1px solid rgba(255,255,255,0.03)}
+.small-muted{font-size:13px;color:var(--muted)}
+.logo-btn{display:inline-block;margin-top:8px;padding:8px 10px;border-radius:8px;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.18);cursor:pointer}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.cart{width:94%;left:3%;right:3%}}
+/* small visual niceties for premium look */
+.note-badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.12);color:var(--gold);font-weight:700}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="logo" id="logoBox" title="ExamTopperNotes">
+      <img id="logoImg" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><rect rx='24' width='100%' height='100%' fill='%23ffd700'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Cinzel,serif' font-size='48' fill='%23000'>ETN</text></svg>" alt="logo" style="width:70px;display:block">
+    </div>
+    <div>
+      <div class="title">ExamTopperNotes.in — Gold Edition</div>
+      <div class="small-muted">AI audio • 1-page summaries • instant downloads</div>
+    </div>
+    <nav class="nav" aria-label="main navigation">
+      <button class="btn-alt" onclick="scrollToId('free')">Free Material</button>
+      <button class="btn-alt" onclick="scrollToId('notes')">Notes Shop</button>
+      <button class="btn-alt" onclick="openMyOrders()">My Orders</button>
+      <button class="btn-alt" id="loginBtn" onclick="openLogin()">Student Login</button>
+      <button class="btn" onclick="openAdmin()">Admin</button>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Revise smarter. Score higher.</h1>
+      <p>Premium & free notes for Classes 6–12. Fast revision, audio summaries & secure downloads. Launch offer: Full Class Pack ₹79 — Premium Gold Pack ₹149</p>
+      <div style="margin-top:14px">
+        <button class="btn" onclick="scrollToId('notes')">Browse Notes</button>
+        <button class="btn-alt" onclick="openDemoBuy()">Get Free Demo</button>
+      </div>
+
+      <div class="features" style="margin-top:18px">
+        <div class="card">🎧 <strong>AI Audio Notes</strong><div class="small-muted">Listen & revise</div></div>
+        <div class="card">📄 <strong>1-page Summaries</strong><div class="small-muted">Fast revision sheets</div></div>
+        <div class="card">🔒 <strong>QR-secured PDFs</strong><div class="small-muted">Access after approval</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div style="height:220px;border-radius:12px;background-image:linear-gradient(135deg,rgba(0,0,0,0.4),rgba(0,0,0,0.18)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200');background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:14px">
+        <div>
+          <div style="font-weight:800;color:var(--gold);font-size:18px">Limited Launch Offer</div>
+          <div class="small-muted" style="margin-top:6px">Full Class Pack ₹79 • Premium Gold Pack ₹149</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <div class="card" style="flex:1">Free 2–3 premium uses per student</div>
+        <div class="card" style="flex:1">Teacher marketplace soon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / CEO -->
+  <section class="card" style="margin-top:18px">
+    <h2 class="h2">About ExamTopperNotes</h2>
+    <p class="small-muted">ExamTopperNotes provides crisp 1-page summaries, PYQs, MCQ practice and audio notes designed for quick revision. <strong>CEO:</strong> Akshay Dwivedi</p>
+    <div style="margin-top:10px"><button class="logo-btn" onclick="downloadLogo()">Download Premium Logo (PNG)</button></div>
+  </section>
+
+  <!-- FREE MATERIAL -->
+  <section id="free" class="section">
+    <h2 class="h2">Free Material (Always Free)</h2>
+    <div class="grid">
+      <div class="item"><h4>Short Notes PDF (Classes 6–12)</h4><p class="small-muted">1-page quick revision PDFs — permanently free.</p><div style="margin-top:8px"><button class="btn-alt" onclick="downloadFree('shortnotes')">Download</button></div></div>
+      <div class="item"><h4>Sample MCQ Practice</h4><p class="small-muted">Chapterwise MCQs for quick practice.</p><div style="margin-top:8px"><button class="btn-alt" onclick="openMCQ()">Start Practice</button></div></div>
+      <div class="item"><h4>Previous Year Papers (PYQs)</h4><p class="small-muted">Board exam papers collection.</p><div style="margin-top:8px"><button class="btn-alt" onclick="downloadFree('pyq')">Download</button></div></div>
+      <div class="item"><h4>Study Planner (Printable)</h4><p class="small-muted">Free printable weekly planner.</p><div style="margin-top:8px"><button class="btn-alt" onclick="downloadFree('planner')">Download</button></div></div>
+    </div>
+  </section>
+
+  <!-- NOTES SHOP -->
+  <section id="notes" class="section">
+    <h2 class="h2">Notes Shop</h2>
+    <p class="small-muted">Categories: Science, Commerce, Arts, Maths, English, English Grammar. Click Add or Buy (UPI).</p>
+
+    <div style="margin-top:12px">
+      <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div class="note-badge">Science</div>
+        <div style="flex:1">
+          <div class="small-muted">Class 10 — Chapterwise</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <div class="item" style="min-width:250px"><h4>Science - Chapter 1: Matter</h4><div class="small-muted">1-page + audio</div><div style="margin-top:8px"><strong>₹10</strong> <button class="btn" onclick="addToCart('sci-1')">Add</button> <button class="btn-alt" onclick="openBuyDirect('sci-1')">Buy (UPI)</button></div></div>
+            <div class="item" style="min-width:250px"><h4>Science - Chapter 2: Force</h4><div class="small-muted">1-page + PYQ</div><div style="margin-top:8px"><strong>₹10</strong> <button class="btn" onclick="addToCart('sci-2')">Add</button> <button class="btn-alt" onclick="openBuyDirect('sci-2')">Buy (UPI)</button></div></div>
+            <div class="item" style="min-width:250px"><h4>Science Full Pack (Class)</h4><div class="small-muted">All chapters + audio</div><div style="margin-top:8px"><strong>₹79</strong> <button class="btn" onclick="addToCart('full-sci')">Add</button> <button class="btn-alt" onclick="openBuyDirect('full-sci')">Buy (UPI)</button></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commerce -->
+    <div style="margin-top:12px">
+      <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div class="note-badge">Commerce</div>
+        <div style="flex:1">
+          <div class="small-muted">Class 11/12 — Core</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <div class="item" style="min-width:250px"><h4>Commerce - Chapter 1: Business</h4><div class="small-muted">1-page + PYQ</div><div style="margin-top:8px"><strong>₹10</strong> <button class="btn" onclick="addToCart('com-1')">Add</button> <button class="btn-alt" onclick="openBuyDirect('com-1')">Buy (UPI)</button></div></div>
+            <div class="item" style="min-width:250px"><h4>Commerce Full Pack</h4><div class="small-muted">All chapters</div><div style="margin-top:8px"><strong>₹79</strong> <button class="btn" onclick="addToCart('full-com')">Add</button> <button class="btn-alt" onclick="openBuyDirect('full-com')">Buy (UPI)</button></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maths / English -->
+    <div style="margin-top:12px">
+      <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div class="note-badge">Maths / English</div>
+        <div style="flex:1">
+          <div class="small-muted">Chapters & grammar</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <div class="item" style="min-width:250px"><h4>Maths - Chapter 1: Number Systems</h4><div class="small-muted">Formula sheet</div><div style="margin-top:8px"><strong>₹10</strong> <button class="btn" onclick="addToCart('math-1')">Add</button> <button class="btn-alt" onclick="openBuyDirect('math-1')">Buy (UPI)</button></div></div>
+            <div class="item" style="min-width:250px"><h4>English Grammar - Tenses</h4><div class="small-muted">Rules + exercises</div><div style="margin-top:8px"><strong>₹10</strong> <button class="btn" onclick="addToCart('engg-1')">Add</button> <button class="btn-alt" onclick="openBuyDirect('engg-1')">Buy (UPI)</button></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT & ORDERS -->
+  <section id="payment" class="section">
+    <h2 class="h2">Payment & My Orders</h2>
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:14px">
+      <div>
+        <div class="card">
+          <h4>Pay To (UPI)</h4>
+          <p class="small-muted">Name: <strong>Ajay Dwivedi</strong><br>UPI ID: <strong>9140505924@ybl</strong></p>
+          <p class="small-muted">Scan the QR or click Copy to pay instantly from your UPI app.</p>
+          <div style="margin-top:10px"><img id="upiQR" src="" alt="UPI QR" style="width:200px;height:200px;border-radius:10px;background:#fff;padding:8px"></div>
+          <div style="margin-top:10px"><button class="btn" onclick="copyUPID()">Copy UPI ID</button> <button class="btn-alt" onclick="openUploadModal()">Upload Payment Screenshot</button></div>
+          <div class="small-muted" style="margin-top:8px">Note: payments go directly to Ajay Dwivedi. After upload admin will verify & unlock downloads.</div>
+        </div>
+
+        <div style="margin-top:12px" id="myOrdersBox">
+          <h4 class="h2">My Orders</h4>
+          <div id="ordersList" class="order-list small-muted">(Login to see your orders)</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4>How to purchase (Quick)</h4>
+          <ol class="small-muted">
+            <li>Add notes to cart or click Buy (UPI)</li>
+            <li>Scan QR and pay using your UPI app</li>
+            <li>Upload screenshot → Admin verifies</li>
+            <li>After approval, you get a secure QR to download files</li>
+          </ol>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <h4>Account</h4>
+          <div id="accountBox" class="small-muted">Not logged in</div>
+          <div style="margin-top:8px"><button class="btn-alt" onclick="openLogin()">Login</button> <button class="btn-alt" onclick="logout()" id="logoutBtn" style="display:none">Logout</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">© <span id="year"></span> ExamTopperNotes.in — Demo • UPI: 9140505924@ybl (Ajay Dwivedi)</div>
+</div>
+
+<!-- CART -->
+<div class="cart" id="cartBox" aria-live="polite">
+  <h4>Cart</h4>
+  <div class="cart-list" id="cartList"></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><div><strong>Total:</strong> ₹<span id="cartTotal">0</span></div><div><button class="btn" onclick="openCheckoutOptions()">Checkout</button></div></div>
+</div>
+
+<!-- MODALS -->
+<div class="modal" id="loginModal">
+  <h3>Student Login</h3>
+  <input id="studentName" class="input" placeholder="Enter name (demo)"/>
+  <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="studentLogin()">Login</button><button class="btn-alt" onclick="closeLogin()">Cancel</button></div>
+  <div class="small-muted" style="margin-top:8px">No password required for demo. Use real auth in production.</div>
+</div>
+
+<div class="modal" id="uploadModal">
+  <h3>Upload Payment Screenshot</h3>
+  <p class="small-muted">After paying to <strong>Ajay Dwivedi — 9140505924@ybl</strong>, choose the screenshot and enter your name (so we can match the order).</p>
+  <input id="uploadItemId" class="input" placeholder="Enter Note ID or CART-ORDER-ID"/>
+  <input id="uploadName" class="input" placeholder="Your name" style="margin-top:8px"/>
+  <input id="uploadFile" type="file" accept="image/*" class="file-input" style="margin-top:8px"/>
+  <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="submitUpload()">Submit</button> <button class="btn-alt" onclick="closeUploadModal()">Cancel</button></div>
+</div>
+
+<div class="modal" id="adminModal">
+  <h3>Admin Panel</h3>
+  <div class="small-muted">Enter admin password to manage (demo).</div>
+  <input id="adminPass" class="input" placeholder="Admin password (demo: admin123)" style="margin-top:8px"/>
+  <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="adminLogin()">Open</button> <button class="btn-alt" onclick="closeAdmin()">Close</button></div>
+  <div id="adminContent" style="margin-top:12px"></div>
+</div>
+
+<div class="modal" id="qrModal">
+  <h3>Your Download QR</h3>
+  <div id="qrImage"></div>
+  <div class="small-muted" style="margin-top:10px">Scan this QR on any device to access your purchased files.</div>
+  <div style="margin-top:10px"><button class="btn" onclick="closeQR()">Close</button></div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+/* ----------------- CONFIG ----------------- */
+const UPI_ID = '9140505924@ybl';
+const UPI_NAME = 'Ajay Dwivedi';
+const ADMIN_PASSWORD = 'admin123'; // demo password — change in production
+const LS_CART = 'etn_cart_v2';
+const LS_USER = 'etn_user_v2';
+const LS_PUR = 'etn_purchases_v2';
+const LS_STATS = 'etn_stats_v2';
+const LS_FREE = 'etn_freeuses_v2';
+
+/* ----------------- SAMPLE NOTES DATA ----------------- */
+const NOTES = [
+  {id:'sci-1',title:'Science - Chapter 1: Matter',cat:'Science',price:10,files:['sample-sci-1.txt'],premium:false},
+  {id:'sci-2',title:'Science - Chapter 2: Force',cat:'Science',price:10,files:['sample-sci-2.txt'],premium:false},
+  {id:'com-1',title:'Commerce - Chapter 1: Business',cat:'Commerce',price:10,files:['sample-com-1.txt'],premium:false},
+  {id:'math-1',title:'Maths - Chapter 1: Number Systems',cat:'Maths',price:10,files:['sample-math-1.txt'],premium:false},
+  {id:'engg-1',title:'English Grammar - Tenses',cat:'English',price:10,files:['sample-engg-1.txt'],premium:false},
+  {id:'full-sci',title:'Science Full Pack',cat:'Science',price:79,files:['sample-sci-1.txt','sample-sci-2.txt'],premium:true},
+  {id:'full-com',title:'Commerce Full Pack',cat:'Commerce',price:79,files:['sample-com-1.txt'],premium:true}
+];
+
+/* ----------------- UTIL ----------------- */
+function $(id){return document.getElementById(id)}
+function saveLS(key,val){localStorage.setItem(key,JSON.stringify(val))}
+function readLS(key,defaultVal){try{const v=localStorage.getItem(key);return v?JSON.parse(v):defaultVal}catch(e){return defaultVal}}
+
+/* ----------------- RENDER NOTES / CART ----------------- */
+function formatNotes(){
+  const grid = $('notes').querySelector('.section') || null; // not used; we render via existing DOM items
+  // we already placed items statically for premium look above
+}
+function getCart(){ return readLS(LS_CART,[]) }
+function saveCart(c){ saveLS(LS_CART,c); renderCart() }
+function addToCart(id){
+  const note = NOTES.find(n=>n.id===id); if(!note){ alert('Note not found'); return; }
+  const c = getCart(); c.push(note); saveCart(c); alert('Added to cart: '+note.title);
+}
+function renderCart(){
+  const list = $('cartList'); list.innerHTML=''; const c=getCart(); let total=0;
+  c.forEach((it,idx)=>{ total+=it.price; const row = document.createElement('div'); row.className='cart-row'; row.innerHTML=`<div style="font-size:13px">${it.title}</div><div>₹${it.price} <a href="#" onclick="removeFromCart(${idx})" class="small-muted">Remove</a></div>`; list.appendChild(row); });
+  $('cartTotal').textContent = total;
+}
+function removeFromCart(i){ const c=getCart(); c.splice(i,1); saveCart(c); }
+
+/* ----------------- LOGIN / ORDERS ----------------- */
+function openLogin(){ $('loginModal').classList.add('show') }
+function closeLogin(){ $('loginModal').classList.remove('show') }
+function studentLogin(){
+  const name = $('studentName').value.trim(); if(!name){alert('Enter name');return;}
+  saveLS(LS_USER,{name}); closeLogin(); alert('Logged in as '+name); $('loginBtn').textContent = 'Logged in: '+name; $('logoutBtn').style.display='inline-block'; renderOrders(); updateAccountBox();
+}
+function logout(){ localStorage.removeItem(LS_USER); alert('Logged out'); $('loginBtn').textContent='Student Login'; $('logoutBtn').style.display='none'; renderOrders(); updateAccountBox(); }
+function updateAccountBox(){ const user = readLS(LS_USER,null); if(user) $('accountBox').innerHTML = `<strong>${user.name}</strong>`; else $('accountBox').innerHTML='Not logged in'; }
+
+/* ----------------- UPI QR & Copy ----------------- */
+function setUPIQR(){ const upiLink = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_NAME)}&cu=INR`; const qrURL = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl='+encodeURIComponent(upiLink); $('upiQR').src = qrURL; }
+function copyUPID(){ navigator.clipboard.writeText(UPI_ID).then(()=>alert('UPI ID copied: '+UPI_ID)) }
+
+/* ----------------- BUY DIRECT (single item) ----------------- */
+function openBuyDirect(id){
+  const user = readLS(LS_USER,null); if(!user){ openLogin(); return; }
+  const note = NOTES.find(n=>n.id===id); if(!note){alert('Not found');return;}
+  // store pending item and show QR
+  localStorage.setItem('etn_pending_item', JSON.stringify({itemId: id, amount: note.price}));
+  showUPIQR(id, note.price);
+  alert('UPI QR shown. After paying, upload screenshot using Upload Screenshot button.');
+}
+function showUPIQR(itemId, amount){
+  const upiLink = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_NAME)}&am=${amount}&cu=INR`;
+  const qrURL = 'https://chart.googleapis.com/chart?cht=qr&chs=320x320&chl='+encodeURIComponent(upiLink);
+  $('upiQR').src = qrURL;
+  localStorage.setItem('etn_pending_item', JSON.stringify({itemId,amount}));
+}
+
+/* ----------------- CART CHECKOUT -> pending order ----------------- */
+function openCheckoutOptions(){
+  const cart = getCart(); const user = readLS(LS_USER,null); if(!user){ openLogin(); return; }
+  if(cart.length===0){ alert('Cart is empty'); return; }
+  const total = cart.reduce((s,it)=>s+it.price,0);
+  if(!confirm(`Pay ₹${total} via UPI to ${UPI_NAME} (${UPI_ID}). Click OK to see QR and then upload payment screenshot.`)) return;
+  // create pending purchase record (awaiting screenshot)
+  const purchases = readLS(LS_PUR,[]);
+  const id = 'PUR'+Date.now();
+  const purchase = { id, user:user.name, items:cart, total, date:new Date().toISOString(), paymentMethod:'UPI', paymentScreenshot:null, status:'awaiting_screenshot' };
+  purchases.push(purchase); saveLS(LS_PUR,purchases);
+  localStorage.setItem(LS_CART, JSON.stringify([])); renderCart(); renderAdmin(); // show QR for total
+  localStorage.setItem('etn_pending_item', JSON.stringify({itemId:'CART-'+id,amount:total}));
+  showUPIQR('CART-'+id,total);
+  alert('Pending order created. Pay via QR & then Upload Screenshot.');
+  renderOrders();
+}
+
+/* ----------------- UPLOAD PAYMENT SCREENSHOT ----------------- */
+function openUploadModal(){ $('uploadModal').classList.add('show'); const pending = JSON.parse(localStorage.getItem('etn_pending_item')||'null'); if(pending) $('uploadItemId').value = pending.itemId; }
+function closeUploadModal(){ $('uploadModal').classList.remove('show'); }
+function submitUpload(){
+  const file = $('uploadFile').files[0];
+  const name = $('uploadName').value.trim();
+  const itemId = $('uploadItemId').value.trim();
+  if(!file || !name || !itemId){ alert('Please fill fields & attach screenshot'); return; }
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const dataURL = e.target.result;
+    const purchases = readLS(LS_PUR,[]);
+    const id = 'PUR'+Date.now();
+    const item = NOTES.find(n=>n.id===itemId) || {id:itemId,title:itemId,price:0};
+    const purchase = { id, user:name, items:[item], total:item.price || 0, date:new Date().toISOString(), paymentMethod:'UPI', paymentScreenshot:dataURL, status:'pending' };
+    purchases.push(purchase); saveLS(LS_PUR,purchases);
+    closeUploadModal(); alert('Upload received. Admin will verify & approve.');
+    renderAdmin(); renderOrders();
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ----------------- ADMIN ----------------- */
+function openAdmin(){ $('adminModal').classList.add('show'); $('adminContent').innerHTML=''; $('adminPass').value=''; }
+function closeAdmin(){ $('adminModal').classList.remove('show'); }
+function adminLogin(){
+  const pass = $('adminPass').value;
+  if(pass !== ADMIN_PASSWORD){ alert('Wrong password (demo)'); return; }
+  // show admin content
+  const purchases = readLS(LS_PUR,[]);
+  const stats = readLS(LS_STATS,{});
+  let html = `<div class="small-muted">Total purchases: ${purchases.length}</div>`;
+  html += `<div style="margin-top:8px">`;
+  purchases.slice().reverse().forEach(p=>{
+    const items = (p.items||[]).map(i=>i.title||i.id).join(', ');
+    html += `<div class="order-card"><strong>${p.user}</strong> — ₹${p.total || p.items.reduce((s,it)=>s+it.price,0)}<div class="small-muted">${new Date(p.date).toLocaleString()}</div><div class="small-muted">Status: <strong>${p.status||'paid'}</strong></div>`;
+    if(p.paymentScreenshot) html += `<div style="margin-top:8px"><img src="${p.paymentScreenshot}" style="max-width:220px;border-radius:6px"></div>`;
+    html += `<div style="margin-top:8px"><button class="approve-btn" onclick="approvePurchase('${p.id}')">Approve</button> <button class="btn-alt" onclick="rejectPurchase('${p.id}')">Reject</button></div></div>`;
+  });
+  html += `</div>`;
+  html += `<div style="margin-top:12px"><strong>Download Counts</strong><pre style="color:var(--muted)">${JSON.stringify(stats,null,2)}</pre></div>`;
+  $('adminContent').innerHTML = html;
+}
+
+/* Approve / Reject */
+function approvePurchase(id){
+  const purchases = readLS(LS_PUR,[]);
+  const idx = purchases.findIndex(p=>p.id===id);
+  if(idx===-1){ alert('Not found'); return; }
+  purchases[idx].status = 'approved';
+  // update stats & free-uses per user for premium
+  recordStats(purchases[idx]);
+  saveLS(LS_PUR,purchases); renderAdmin(); renderOrders(); alert('Approved — download QR generated'); showQR(purchases[idx]);
+}
+function rejectPurchase(id){
+  const purchases = readLS(LS_PUR,[]);
+  const idx = purchases.findIndex(p=>p.id===id);
+  if(idx===-1){ alert('Not found'); return; }
+  purchases[idx].status = 'rejected'; saveLS(LS_PUR,purchases); renderAdmin(); renderOrders(); alert('Rejected');
+}
+
+/* ----------------- RENDER ORDERS (customer) ----------------- */
+function renderOrders(){
+  const user = readLS(LS_USER,null);
+  const box = $('ordersList');
+  if(!user){ box.innerHTML='(Login to see your orders)'; return; }
+  const purchases = readLS(LS_PUR,[]);
+  const my = purchases.filter(p=>p.user === user.name);
+  if(my.length===0){ box.innerHTML = 'No orders yet.'; return; }
+  let html = '';
+  my.slice().reverse().forEach(p=>{
+    const items = (p.items||[]).map(i=>i.title||i.id).join(', ');
+    html += `<div class="order-card"><strong>Order ID:</strong> ${p.id}<br><strong>Amount:</strong> ₹${p.total || p.items.reduce((s,it)=>s+it.price,0)}<br><strong>Status:</strong> ${p.status||'paid'}<br><strong>Items:</strong> ${items}`;
+    if(p.status === 'approved') html += `<div style="margin-top:8px"><button class="btn" onclick='showQR(${JSON.stringify(p)})'>Get Download QR</button></div>`;
+    else html += `<div style="margin-top:8px" class="small-muted">Waiting for admin approval</div>`;
+    html += `</div>`;
+  });
+  box.innerHTML = html;
+}
+
+/* ----------------- QR / Download access ----------------- */
+function showQR(purchase){
+  $('qrModal').classList.add('show');
+  const qrDiv = $('qrImage');
+  // create payload token that encodes order id + user
+  const payload = btoa(JSON.stringify({pid:purchase.id,user:purchase.user}));
+  const qrURL = 'https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl='+encodeURIComponent(payload);
+  qrDiv.innerHTML = `<img src="${qrURL}" alt="qr" class="qr"><div class="small-muted" style="margin-top:8px">Order ID: ${purchase.id}</div><div style="margin-top:8px"><button class="btn-alt" onclick="openDownloadPage('${payload}')">Open Download</button></div>`;
+}
+function closeQR(){ $('qrModal').classList.remove('show'); }
+function openDownloadPage(payload){
+  // open a new tab with download viewer and pass payload as hash
+  const url = location.origin + location.pathname + '#download:'+payload;
+  window.open(url,'_blank');
+}
+
+/* On new window load if hash contains download payload -> verify & show files */
+function checkHashForDownload(){
+  try{
+    if(location.hash && location.hash.startsWith('#download:')){
+      const payload = location.hash.replace('#download:','');
+      const data = JSON.parse(atob(payload));
+      const purchases = readLS(LS_PUR,[]);
+      const found = purchases.find(p=>p.id===data.pid && p.user===data.user && p.status==='approved');
+      if(found){
+        // show a simple download page
+        document.documentElement.innerHTML = `<div style="min-height:100vh;background:#06060a;color:#fff;display:flex;align-items:center;justify-content:center"><div style="max-width:720px;padding:20px;border-radius:12px;background:#0c0c0e"><h2 style="color:${'var(--gold)'}">Downloads for ${found.id}</h2><div style="margin-top:12px" id="downloadFiles"></div><div style="margin-top:18px"><button onclick="location.reload()" class="btn-alt">Close</button></div></div></div>`;
+        const df = document.getElementById('downloadFiles');
+        (found.items||[]).forEach(it=>{
+          // create downloadable blob for demo (text file). In production, replace with real PDF signed URLs.
+          const filename = (it.files && it.files[0]) ? it.files[0] : (it.id+'.txt');
+          const content = `Downloaded file: ${it.title || it.id}\nOrder ID: ${found.id}\nThank you for purchasing from ExamTopperNotes.in`;
+          const blob = new Blob([content],{type:'text/plain'}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; a.textContent = 'Download '+(it.title||it.id); a.className='btn-alt'; a.style.display='inline-block'; a.style.margin='6px';
+          df.appendChild(a);
+        });
+      } else {
+        document.documentElement.innerHTML = `<div style="min-height:100vh;background:#06060a;color:#fff;display:flex;align-items:center;justify-content:center"><div style="max-width:720px;padding:20px;border-radius:12px;background:#0c0c0e"><h2>Access denied</h2><p class="small-muted">No approved purchase found for this QR.</p><div style="margin-top:12px"><button onclick="location.href='${location.pathname}'" class="btn-alt">Go back</button></div></div></div>`;
+      }
+    }
+  }catch(e){ console.warn(e) }
+}
+
+/* ----------------- STATS & FREE USES ----------------- */
+function recordStats(purchase){
+  const stats = readLS(LS_STATS,{});
+  (purchase.items||[]).forEach(it => { stats[it.id] = (stats[it.id]||0)+1; });
+  saveLS(LS_STATS,stats);
+  // increment free uses if premium items approved
+  const free = readLS(LS_FREE,{});
+  free[purchase.user] = free[purchase.user] || 0;
+  (purchase.items||[]).forEach(it => { if(it.premium) free[purchase.user] = (free[purchase.user]||0)+1; });
+  saveLS(LS_FREE,free);
+}
+
+/* ----------------- Approve flow helper already calls recordStats ----------------- */
+
+/* ----------------- DEMO: simple MCQ practice ----------------- */
+function openMCQ(){
+  // simple inline MCQ demo
+  const mcqHtml = `<div style="padding:18px;background:#0c0c0e;border-radius:12px;max-width:720px;margin:24px auto;color:#fff">
+    <h2>MCQ Practice — Demo</h2>
+    <ol>
+      <li>What is the SI unit of force? <br><label><input type="radio" name="q1"> Newton</label> <label><input type="radio" name="q1"> Joule</label></li>
+      <li>Which is a prime number? <br><label><input type="radio" name="q2"> 15</label> <label><input type="radio" name="q2"> 17</label></li>
+    </ol>
+    <div style="margin-top:12px"><button class="btn" onclick="location.reload()">Close</button></div>
+  </div>`;
+  document.documentElement.innerHTML = mcqHtml;
+}
+
+/* ----------------- EXPORT / ADMIN UTILS ----------------- */
+function exportData(){
+  const purchases = readLS(LS_PUR,[]);
+  const stats = readLS(LS_STATS,{});
+  const data = {purchases,stats};
+  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='examtopper_data_'+Date.now()+'.json'; a.click();
+}
+
+/* ----------------- Logo download ----------------- */
+function downloadLogo(){
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><rect rx='40' width='100%' height='100%' fill='%23ffd700'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Cinzel, serif' font-size='260' fill='%23000'>ETN</text></svg>`;
+  const img = new Image(); const svg64='data:image/svg+xml;base64,'+btoa(svg);
+  img.onload = function(){ const c=document.createElement('canvas'); c.width=600; c.height=600; const ctx=c.getContext('2d'); ctx.drawImage(img,0,0); const png=c.toDataURL('image/png'); const a=document.createElement('a'); a.href=png; a.download='examtopper_logo.png'; a.click(); };
+  img.src = svg64;
+}
+
+/* ----------------- Helpers & Init ----------------- */
+function scrollToId(id){ const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}) }
+function openDemoBuy(){ saveLS(LS_USER,{name:'DemoStudent'}); saveLS(LS_CART,[NOTES[0]]); renderCart(); openCheckoutOptions(); }
+function renderAdmin(){ adminLogin(); } // quick view after opening admin
+function openMyOrders(){ scrollToId('payment'); renderOrders(); updateAccountBox(); $('loginBtn').style.display='none' }
+
+/* initialize UI */
+(function init(){
+  $('year').textContent = new Date().getFullYear();
+  setUPIQR(); renderCart(); renderOrders(); updateAccountBox(); checkHashForDownload();
+})();
+</script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
